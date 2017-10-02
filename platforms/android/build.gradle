@@ -90,6 +90,7 @@ ext {
 // PLUGIN GRADLE EXTENSIONS START
 apply from: "com-sarriaroman-photoviewer/Tienda-photoviewer.gradle"
 apply from: "cordova-android-play-services-gradle-release/Tienda-cordova-android-play-services-gradle-release.gradle"
+apply from: "onesignal-cordova-plugin/Tienda-build-extras-onesignal.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
@@ -253,6 +254,12 @@ dependencies {
     releaseCompile(project(path: "CordovaLib", configuration: "release"))
     compile "com.google.android.gms:play-services-analytics:+"
     compile "com.android.support:support-v4:24.1.1+"
+    compile "com.onesignal:OneSignal:3.5.6"
+    compile "com.android.support:support-v4:25.+"
+    compile "com.android.support:appcompat-v7:25.+"
+    compile "com.google.android.gms:play-services-base:+"
+    compile "com.google.android.gms:play-services-ads:+"
+    compile "com.google.android.gms:play-services-location:+"
     // SUB-PROJECT DEPENDENCIES END
 }
 
